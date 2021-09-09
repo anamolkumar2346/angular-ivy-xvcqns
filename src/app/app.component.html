@@ -1,4 +1,47 @@
-<hello name="{{ name }}"></hello>
-<p>
+<!-- <hello name="{{ name }}"></hello> -->
+<h1 style="color:green">Candidate</h1>
+<!-- <p>
   Start editing to see some magic happen :)
-</p>
+</p> -->
+
+<div class="checkbox">
+  <input type="checkbox" change="filterMale($event)">Male
+  <!-- <p>{{isMale}}</p> -->
+  <input type="checkbox">Female
+</div>
+
+<input type="text" placeholder="What are you looking for">&nbsp;
+<button type="submit">Search</button>
+
+<table>
+  <th>Sr No.</th>
+  <th>First Name</th>
+  <th>Last Name</th>
+  <th>Email Id</th>
+  <th>Gender</th>
+  <tr *ngFor="let data of arr">
+    <td>{{data.id}}</td>
+    <td>{{data.first_name}}</td>
+    <td>{{data.last_name}}</td>
+    <td>{{data.email}}</td>
+    <td>{{data.gender}}</td>
+  </tr>
+</table>
+
+<h2>Add new Candidate</h2>
+<div class="row">
+  <div class="col-md-6">
+    <input type="text" placeholder="First Name">
+  </div>
+  <div class="col-md-6">
+    <input type="text" placeholder="Last Name">
+  </div>
+  <div class="col-md-6">
+    <input type="text" placeholder="Email Id">
+  </div>
+  <div class="col-md-6">
+    <input type="radio" >Male
+    <input type="radio" >Female
+  </div>
+  <button type="submit">submit</button>
+</div>
